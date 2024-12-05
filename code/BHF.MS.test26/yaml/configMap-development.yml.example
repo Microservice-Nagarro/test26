@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: test26-configmap
+data:
+  appsettings.Development.json: |-
+    {
+        "ConnectionStrings": {
+            "ClientId": "#{ClientId}#",
+            "TenantId": "#{TenantId}#",
+            "ClientSecret": "#{ClientSecret}#",
+            "Dbtest26": "Data Source=host.minikube.internal,1433;Initial Catalog=test26;User ID=#{DbAccount}#;Password=#{DbPassword}#;Trust Server Certificate=True"
+        }
+    }
+
+
